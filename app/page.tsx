@@ -1,7 +1,8 @@
-import { Button } from '@/components/ui/button';
-import { MapPin, Users, MessageCircle } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { SignInButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { MapPin, Users, MessageCircle } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
                 Connect with Friends in Real Life
               </h1>
               <p className="text-xl text-blue-700 mb-8">
-                Never miss an opportunity to meet up with friends when you're nearby. Share your location, see who's around, and make real connections happen.
+                Never miss an opportunity to meet up with friends when you're
+                nearby. Share your location, see who's around, and make real
+                connections happen.
               </p>
               <div className="space-x-4">
                 <Link href="/auth/signup">
@@ -23,11 +26,11 @@ export default function Home() {
                     Get Started
                   </Button>
                 </Link>
-                <Link href="/auth/login">
+                <SignInButton mode="modal">
                   <Button size="lg" variant="outline">
                     Sign In
                   </Button>
-                </Link>
+                </SignInButton>
               </div>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
@@ -35,7 +38,7 @@ export default function Home() {
                 src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2089&q=80"
                 alt="Friends meeting"
                 fill
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>
@@ -51,15 +54,17 @@ export default function Home() {
               <MapPin className="w-12 h-12 text-blue-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-4">Share Location</h3>
               <p className="text-gray-600">
-                Securely share your location with trusted friends and see when they're nearby.
+                Securely share your location with trusted friends and see when
+                they're nearby.
               </p>
             </div>
-            
+
             <div className="bg-blue-50 p-8 rounded-lg text-center">
               <Users className="w-12 h-12 text-blue-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-4">Find Friends</h3>
               <p className="text-gray-600">
-                See which friends are in your area and arrange spontaneous meetups.
+                See which friends are in your area and arrange spontaneous
+                meetups.
               </p>
             </div>
 
@@ -67,7 +72,8 @@ export default function Home() {
               <MessageCircle className="w-12 h-12 text-blue-500 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-4">Stay Connected</h3>
               <p className="text-gray-600">
-                Chat with friends and coordinate meetups when you're in the same area.
+                Chat with friends and coordinate meetups when you're in the same
+                area.
               </p>
             </div>
           </div>
@@ -77,7 +83,9 @@ export default function Home() {
       {/* Social Proof Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Join Thousands of Connected Friends</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            Join Thousands of Connected Friends
+          </h2>
           <div className="grid grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-4xl font-bold text-blue-600">10K+</div>
